@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class=" border border-1 p-2  " style="height: 450px; background-color: #042743; ">
+    <h3 class="text-center  text-light mt-3">F e e d B a c k</h3>
+
+    <form action="" method="post" class=" d-flex justify-content-center" >
+        {% csrf_token %}
+        <div>
+            <input type="text " class="w-100 px-4 mt-3 " placeholder="name" required="" name="name">
+
+            <input type="text" class="w-100 px-4 mt-3 h-50" placeholder="Your Suggestion" required="" name="feed">
+            <button type="submit" class="btn  fs-5 float-end mt-3" style="background-color:crimson; color: white;">send message</button>
+        </div>
+        
+    </form>
+    
+</div>
+{% endblock content %}

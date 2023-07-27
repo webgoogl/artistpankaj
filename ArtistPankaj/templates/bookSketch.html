@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class=" border border-1 p-2 bg-dark  " style="height: 450px; ">
+    <h3 class="text-center text-info  mt-3">B O O K 🔰 H E R E</h3>
+
+    <form action="" method="post" class=" d-flex justify-content-center">
+        {% csrf_token %}
+        <div>
+            <div class="d-flex justify-content-center rounded-3">
+                <input type="text " class="w-100 px-4 mt-3 " placeholder="name" required="" name="nam">
+            </div>
+            <div class="d-flex justify-content-center rounded-3">
+                <input type="text" class="w-100 px-4  mt-3" placeholder="contact number" required="" name="num">
+            </div>
+           
+            <div class="d-flex justify-content-center">
+                <label for="fileinput"
+                    class="mt-2 border border-1 w-100  text-center fs-1 bg-light rounded-3 pt-5 rounded-3"
+                    style="height: 150px;"> <i class="fa fa-cloud-upload"></i></label>
+                <input type="file" id="fileinput" style="display: none;" name='img' download
+                    accept=".png, .jpg, .jpeg" multiple accept="image/*" required="" />
+            </div>
+            <button type="submit" class="btn  fs-5 float-end mt-3" onclick="message()" style="background-color:crimson; color: white;">Book
+                Now</button>
+        </div>
+
+    </form>
+
+</div>
+<script>
+    const message=()=>{
+        alert("We will response A S A P")
+    }
+</script>
+{% endblock content %}
